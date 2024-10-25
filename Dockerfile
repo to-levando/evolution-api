@@ -47,9 +47,15 @@ ENV CLEAN_STORE_MESSAGES=true
 ENV CLEAN_STORE_MESSAGE_UP=true
 ENV CLEAN_STORE_CONTACTS=true
 ENV CLEAN_STORE_CHATS=true
+ENV DATABASE_PROVIDER=postgresql
 
-ENV DATABASE_ENABLED=false
-ENV DATABASE_CONNECTION_URI=mongodb://root:root@mongodb:27017/?authSource=admin&readPreference=primary&ssl=false&directConnection=true
+
+
+# URI de conexão com o banco de dados
+
+ENV DATABASE_CONNECTION_URI=postgresql://postgres:nFbdob4svUJO6iJXeu4m@evolution-api.cdcyixom8w3e.sa-east-1.rds.amazonaws.com:5432/evolution?schema=public
+ENV DATABASE_ENABLED=true
+ENV DATABASE_CONNECTION_URI=
 ENV DATABASE_CONNECTION_DB_PREFIX_NAME=evolution
 
 ENV DATABASE_SAVE_DATA_INSTANCE=false
@@ -151,8 +157,8 @@ ENV QRCODE_COLOR=#198754
 
 ENV TYPEBOT_API_VERSION=latest
 
-ENV CACHE_REDIS_ENABLED=false
-ENV CACHE_REDIS_URI=redis://redis:6379
+ENV CACHE_REDIS_ENABLED=true
+ENV CACHE_REDIS_URI=redis://clustercfg.evolution-api.zuauor.sae1.cache.amazonaws.com:6379
 ENV CACHE_REDIS_PREFIX_KEY=evolution
 ENV CACHE_REDIS_TTL=604800
 ENV CACHE_REDIS_SAVE_INSTANCES=false
